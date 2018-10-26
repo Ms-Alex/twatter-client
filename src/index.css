@@ -17,6 +17,7 @@ body {
 /* Nav */
 .navbar {
   margin-bottom: 1rem;
+  border-bottom: 2px solid black;
 }
 
 .navbar a {
@@ -54,4 +55,24 @@ ul.nav.navbar-nav li {
 .navbar-header img {
   width: 7%;
   height: 7%;
+}
+
+.home-hero {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  background-image: url('./images/signed-out.jpeg');
+  text-align: center;
+  padding: 1rem;
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  text-shadow: 0 0 8px #66757f;
 }
