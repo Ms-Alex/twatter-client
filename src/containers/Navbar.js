@@ -10,8 +10,9 @@ class Navbar extends Component {
             <div className="container-fluid">
                 
                 <div className="navbar-header">
-                    <Link to="/" className="navbar-brand" > Hi </Link>
-                    <img src={Logo} alt="Twatter Home" />
+                        <Link to="/" > 
+                            <img src={Logo} alt="Twatter Home" />
+                        </Link>
                 </div>
 
                 <ul className="nav navbar-nav ml-auto">
