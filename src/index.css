@@ -46,8 +46,8 @@ ul.nav.navbar-nav li {
 }
 
 .onboarding > .navbar {
-  /* background-color: rgb(180, 163, 245); */
-  background: linear-gradient(rgb(149, 126, 241), rgb(250, 166, 180));
+  background-color: rgb(149, 126, 241);
+  /* background: linear-gradient(rgb(149, 126, 241), rgb(250, 166, 180)); */
   background-size: 100% 100%;
 }
 

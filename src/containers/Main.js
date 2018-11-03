@@ -8,16 +8,18 @@ import { authUser } from '../store/actions/auth';
 import { removeError } from '../store/actions/errors';
 
 const Main = (props) => {
-    const { authUser, errors, removeError } = props;
+    const { authUser, errors, removeError, currentUser } = props;
     return (
         <div className="container">
             <Switch>
-                <Route exact path='/' render={ (props) => <Homepage {...props} /> } />
+                <Route exact path='/' render={ (props) => <Homepage currentUser={currentUser} {...props} /> } />
+
                 <Route exact path='/signin' render={ (props) => {
                     return (
                         <AuthForm removeError={removeError} errors={errors} onAuth={authUser} {...props} buttonText="Log In" heading="Welcome back." />
                     )
                 } } />
+                
                 <Route exact path='/signup' render={(props) => {
                     return (
                         <AuthForm removeError={removeError} errors={errors} onAuth={authUser} signUp {...props} buttonText="Sign Up" heading="Join Twatter today." />

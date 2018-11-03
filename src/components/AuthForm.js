@@ -19,8 +19,10 @@ class AuthForm extends Component {
         e.preventDefault();
         const authType = this.props.signUp ? "signup" : "signin";
         this.props.onAuth(authType, this.state).then(() => {
-            console.log('Successful Log In')
-        })
+            this.props.history.push('/');
+        }).catch(() => {
+            return;
+        });
     }
 
     render() {
