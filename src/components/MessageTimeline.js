@@ -4,7 +4,7 @@ import MessageList from '../containers/MessageList';
 const MessageTimeline = (props) => {
 
     return (
-        <div>
+        <div className="row">
             <MessageList />
         </div>
     );

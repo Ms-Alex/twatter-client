@@ -1,6 +1,7 @@
 // landing page
 import React from 'react';
 import { Link } from 'react-router-dom';
+import MessageTimeline from './MessageTimeline';
 
 const Homepage = (props) => {
     if(!props.currentUser.isAuthenticated) {
@@ -19,7 +20,7 @@ const Homepage = (props) => {
 
     return (
         <div>
-            <h1>You Made It!</h1>
+            <MessageTimeline />
         </div>
     )
     
