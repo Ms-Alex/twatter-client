@@ -4,8 +4,10 @@ import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Homepage from '../components/Homepage';
 import AuthForm from '../components/AuthForm';
+import MessageForm from '../containers/MessageForm';
 import { authUser } from '../store/actions/auth';
 import { removeError } from '../store/actions/errors';
+import withAuth from '../hocs/withAuth';
 
 const Main = (props) => {
     const { authUser, errors, removeError, currentUser } = props;
@@ -25,6 +27,8 @@ const Main = (props) => {
                         <AuthForm removeError={removeError} errors={errors} onAuth={authUser} signUp {...props} buttonText="Sign Up" heading="Join Twatter today." />
                     )
                 }} />
+
+                <Route exact path='/users/:id/messages/new' component={withAuth(MessageForm)} />
             </Switch>
         </div>
     )

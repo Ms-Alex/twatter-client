@@ -13,8 +13,12 @@ class MessageList extends Component {
         let messageList = messages.map( message => <MessageCard key={message._id} date={message.createdAt} text={message.text} username={message.user.username} profileImageUrl={message.user.profileImageUrl} />); 
 
         return (
-            <div>
-                {messageList}
+            <div className="row col-sm-8">
+                <div className="offset-1 col-sm-10">
+                    <ul className="list-group" id="messages">
+                        {messageList}
+                    </ul>
+                </div>
             </div>
         );
     }
