@@ -26,7 +26,7 @@ class AuthForm extends Component {
     }
 
     render() {
-        const { email, username, password, profileImageUrl } = this.state;
+        const { email, username, profileImageUrl } = this.state;
         const { heading, buttonText, signUp, errors, history, removeError } = this.props;
 
         //listen for change in route
@@ -59,7 +59,7 @@ class AuthForm extends Component {
                         </div>
                     )
                 }
-
+                <br />
                 <button type="submit" className="btn btn=primary btn-block btn-large">{buttonText}</button>
 
               </form>
