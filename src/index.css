@@ -77,7 +77,7 @@ ul.nav.navbar-nav li {
   text-shadow: 0 0 8px #66757f;
 }
 
-#messages .list-group {
+#messages .list-group-item {
   display: flex;
   align-items: flex-start;
   padding: 7px 20px 12px;
@@ -86,3 +86,24 @@ ul.nav.navbar-nav li {
 #messages:not(.no-hover) .list-group-item:hover {
   background: #e6ecf0;
 }
+
+.message-card {
+  margin: 1%;
+}
+
+.timeline-image {
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  margin: 2px 30px 10px 10px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+a.btn.btn-danger, a.btn.btn-danger:hover {
+  color: white;
+}
+
+

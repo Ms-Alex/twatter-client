@@ -18,7 +18,7 @@ class MessageList extends Component {
         const { messages, currentUser } = this.props;
         let messageList = messages.map( message => <MessageCard key={message._id} date={message.createdAt} text={message.text} username={message.user.username} profileImageUrl={message.user.profileImageUrl} removeMessage={removeMessage.bind(this, message.user._id, message._id)} isCorrectUser={currentUser.user.id === message.user._id} />); 
 
-        console.log(currentUser);
+        // console.log(currentUser);
         return (
             <div className="row col-sm-8">
                 <div className="offset-1 col-sm-10">
