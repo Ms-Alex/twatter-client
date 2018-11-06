@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import defaultProfileImg from '../images/default-profile-image.png';
 
 const MessageCard = (props) => {
-    const { date, profileImageUrl, text, username } = props;
+    const { date, profileImageUrl, text, username, removeMessage, isCorrectUser } = props;
     return (
         <div>
 
@@ -20,6 +20,9 @@ const MessageCard = (props) => {
                     <p>
                         {text}
                     </p>
+                    {isCorrectUser && (
+                        <a className="btn btn-danger" onClick={removeMessage()}>Delete</a>
+                    )}
                 </div>
             </li>
         
