@@ -1,5 +1,3 @@
-README Structure:
-
 # Twatter
 > A social application where you can add your status, throughout the day! As well as, checking out others' status' too!!
 
