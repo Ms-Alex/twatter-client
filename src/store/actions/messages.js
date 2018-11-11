@@ -22,8 +22,7 @@ export const fetchMessages = () => {
     return dispatch => {
         return apiCall("get", '/api/messages')
             .then(res => dispatch(loadMessages(res)))
-            .catch(err => dispatch(addError(err.message)))
-            
+            .catch(err => dispatch(addError(err.message)))         
     }
 }
 
@@ -52,4 +51,13 @@ export const editMessage = (text, message_id) => (dispatch, getState) => {
     return apiCall("put", `/api/users/${id}/messages/${message_id}`, { text })
         .then(res => { })
         .catch(err => dispatch(addError(err.message)));
+}
+
+
+export const addLike = (count, message_id) => (dispatch, getState) => {
+
+    return apiCall("put", `/api/messages/${message_id}`, {
+      likes: count + 1
+    }).then(res => {})
+      .catch(err => dispatch(addError(err.message)));
 }

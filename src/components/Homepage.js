@@ -3,8 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import MessageTimeline from './MessageTimeline';
 
-const Homepage = (props) => {
-    const { currentUser } = props;
+const Homepage = ({currentUser}) => {
+
     if(!currentUser.isAuthenticated) {
         return (
             <div className="home-hero">

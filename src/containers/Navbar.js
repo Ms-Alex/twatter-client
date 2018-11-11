@@ -26,12 +26,11 @@ class Navbar extends Component {
                             <Link to={`/users/${this.props.currentUser.user.id}/messages/new`} >New Message</Link>
                         </li>
                         <li>
-                            <a onClick={this.logout}>Log out</a>
+                            <a  href="#" onClick={this.logout}>Log out</a>
                         </li>
                     </ul>
                 ) :
                 
-
                     <ul className="nav navbar-nav ml-auto">
                         <li>
                             <Link to="/signup">Sign Up</Link>

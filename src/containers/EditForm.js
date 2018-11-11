@@ -16,8 +16,6 @@ class EditForm extends Component {
     handleSaveSubmit = (e) => {
         e.preventDefault();
         this.props.editMessage(this.state.message, this.props.id);
-        console.log(this.props.id)
-        console.log(this.state.message);
         this.props.editOff();
     }
 

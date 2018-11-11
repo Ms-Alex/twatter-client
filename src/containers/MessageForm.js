@@ -29,7 +29,7 @@ class MessageForm extends Component {
                   {this.props.errors}
                 </div>}
 
-              <input type="text" className="form-control" value={this.state.message} onChange={this.handleChange} placeholder="max of 160 characters" maxlength="160" />
+              <input type="text" className="form-control" value={this.state.message} onChange={this.handleChange} placeholder="max of 160 characters" maxLength="160" />
               <br />
               <button type="submit" className="btn btn-success pull-right">
                 Add message

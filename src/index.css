@@ -108,4 +108,8 @@ a.btn.btn-danger, a.btn.btn-danger:hover {
   color: white;
 }
 
+.heart-image:hover {
+  cursor: pointer;
+}
+
 
