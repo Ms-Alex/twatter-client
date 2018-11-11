@@ -16,7 +16,7 @@ class MessageList extends Component {
 
     render() {
         const { messages, currentUser } = this.props;
-        let messageList = messages.map( message => <MessageCard key={message._id} date={message.createdAt} text={message.text} username={message.user.username} profileImageUrl={message.user.profileImageUrl} removeMessage={removeMessage.bind(this, message.user._id, message._id)} isCorrectUser={currentUser.user.id === message.user._id} />); 
+        let messageList = messages.map(message => <MessageCard key={message._id} mID={message._id} date={message.createdAt} text={message.text} username={message.user.username} profileImageUrl={message.user.profileImageUrl} removeMessage={removeMessage.bind(this, message.user._id, message._id)} isCorrectUser={currentUser.user.id === message.user._id} />); 
 
         // console.log(currentUser);
         return (
