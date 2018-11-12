@@ -8,6 +8,7 @@ import MessageForm from '../containers/MessageForm';
 import { authUser } from '../store/actions/auth';
 import { removeError } from '../store/actions/errors';
 import withAuth from '../hocs/withAuth';
+import ProfilePage from './ProfilePage';
 
 const Main = (props) => {
     const { authUser, errors, removeError, currentUser } = props;
@@ -29,6 +30,8 @@ const Main = (props) => {
                 }} />
 
                 <Route exact path='/users/:id/messages/new' component={withAuth(MessageForm)} />
+
+                <Route exact path='/users/:id/profile' render={(props) => <ProfilePage {...props} /> } />
             </Switch>
         </div>
     )

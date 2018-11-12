@@ -16,6 +16,7 @@ class MessageCard extends Component {
     }
 
     renderButtons = () => {
+      if(this.props.profileCard){
       return (
         <div className="my-buttons">
           <button className="btn btn-danger" onClick={this.props.removeMessage()}>
@@ -25,7 +26,7 @@ class MessageCard extends Component {
             Edit
             </button> 
         </div>
-      )
+      )}
     }
 
     renderView = () => {
@@ -67,7 +68,7 @@ class MessageCard extends Component {
           <li className="list-group-item">
             <img src={this.props.profileImageUrl || defaultProfileImg} alt={this.props.username} height="100" width="100" className="timeline-image" />
             <div className="message-area">
-              <Link to="/">@{this.props.username} &nbsp; &nbsp;</Link>
+              <Link to={`/users/${this.props.user}/profile`}>@{this.props.username} &nbsp; &nbsp;</Link>
               <span className="text-muted">
                 <Moment className="text-muted" format="Do MMM YYYY">
                   {this.props.date}

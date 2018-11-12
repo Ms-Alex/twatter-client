@@ -1,6 +1,6 @@
 import { apiCall } from '../../services/api';
 import { addError } from './errors';
-import { LOAD_MESSAGES, REMOVE_MESSAGE, EDIT_MESSAGE } from '../actionTypes';
+import { LOAD_MESSAGES, REMOVE_MESSAGE, LOAD_USER_MESSAGES } from '../actionTypes';
 
 export const loadMessages = messages => ({
     type: LOAD_MESSAGES,
@@ -12,10 +12,10 @@ export const remove = id => ({
     id
 });
 
-// export const edit = id => ({
-//     type: EDIT_MESSAGE,
-
-// })
+export const loadUserMessages = userMessages => ({
+    type: LOAD_USER_MESSAGES,
+    userMessages
+})
 
 // use thunk
 export const fetchMessages = () => {
@@ -60,4 +60,12 @@ export const addLike = (count, message_id) => (dispatch, getState) => {
       likes: count + 1
     }).then(res => {})
       .catch(err => dispatch(addError(err.message)));
+}
+
+export const fetchUserMessages = (user_id) => {
+    return dispatch => {
+        return apiCall("get", `/api/messages/`)
+            .then(res => dispatch(loadMessages(res.filter(m => m.user._id === user_id))))
+            .catch(err => dispatch(addError(err.message)))
+    }
 }
