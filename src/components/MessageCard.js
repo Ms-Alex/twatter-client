@@ -12,7 +12,7 @@ class MessageCard extends Component {
     }
 
     componentDidMount(){
-      window.$('[data-toggle="tooltip"]').tooltip()
+      window.$('.heartTooltip').tooltip()
     }
 
     renderButtons = () => {
@@ -80,7 +80,7 @@ class MessageCard extends Component {
                 </div>}
               <div className="heart">
                 {this.props.isCorrectUser ? (
-                  <span className="heart-image" data-toggle="tooltip" data-placement="left" title="Cannot like your own message.">
+                  <span className="heart-image heartTooltip" data-toggle="tooltip" data-placement="left" title="Cannot like your own message.">
                     {this.renderHeartImg()}
                   </span>
                 ) : (
