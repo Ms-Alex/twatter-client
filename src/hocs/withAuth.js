@@ -7,14 +7,14 @@ export default function withAuth(ComponentToRender) {
         // when component first loads make sure user is logged in
         componentWillMount(){
             if(!this.props.isAuthenticated) {
-                this.props.history.push('/signin');
+                this.props.history.push('/');
             }
         }
 
         // when component is updated, make sure user is logged in
         componentWillUpdate(nextProps){
             if (!nextProps.isAuthenticated) {
-                this.props.history.push('/signin');
+                this.props.history.push('/');
             }
         }
 

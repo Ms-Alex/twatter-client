@@ -12,8 +12,24 @@ class MessageCard extends Component {
     }
 
     componentDidMount(){
-      window.$('.heartTooltip').tooltip()
+
+      window.$('[data-toggle="popover"]').popover({ container: "body", });
+      window.$('.popover-dismiss').popover({
+        trigger: 'focus'
+      })
+
     }
+
+    // componentDidUpdate(){
+    //   window.$(".heartTooltip").tooltip();
+    // }
+    // componentDidMount(){
+    //   window.$('.heartTooltip').tooltip();
+    // }
+
+    // componentDidUpdate(){
+    //   window.$(".heartTooltip").tooltip();
+    // }
 
     renderButtons = () => {
       if(this.props.profileCard){
@@ -68,7 +84,9 @@ class MessageCard extends Component {
           <li className="list-group-item">
             <img src={this.props.profileImageUrl || defaultProfileImg} alt={this.props.username} height="100" width="100" className="timeline-image" />
             <div className="message-area">
-              <Link to={`/users/${this.props.user}/profile`}>@{this.props.username} &nbsp; &nbsp;</Link>
+              <Link to={`/users/${this.props.user}/profile`}>
+                @{this.props.username} &nbsp; &nbsp;
+              </Link>
               <span className="text-muted">
                 <Moment className="text-muted" format="Do MMM YYYY">
                   {this.props.date}
@@ -79,18 +97,16 @@ class MessageCard extends Component {
                   {this.props.text}
                 </div>}
               <div className="heart">
-                {this.props.isCorrectUser ? (
-                  <span className="heart-image heartTooltip" data-toggle="tooltip" data-placement="left" title="Cannot like your own message.">
+                {this.props.isCorrectUser ? 
+                  (<span className="heart-image heartTooltip" data-trigger="focus"  tabIndex="-1" data-container="body" data-toggle="popover" data-placement="left" data-content="Cannot like your message.">
                     {this.renderHeartImg()}
-                  </span>
-                ) : (
-                  <span className="heart-image" onClick={this.handleHeartClick}>
+                  </span> )
+                  : 
+                  (<span className="heart-image" onClick={this.handleHeartClick}>
                     {this.renderHeartImg()}
-                  </span>
-                )
+                  </span> )
+                  }
 
-                }
-                
                 {this.likesCount()}
               </div>
 

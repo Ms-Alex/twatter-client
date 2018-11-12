@@ -15,7 +15,8 @@ export const fetchUser = (user_id) => {
     }
 }
 
-export const editMessage = (profileImageUrl, user_id) => (dispatch, getState) => {
+// Possible edit currentUser profile pic
+export const editUser = (profileImageUrl) => (dispatch, getState) => {
   let { currentUser } = getState();
   const id = currentUser.user.id;
 

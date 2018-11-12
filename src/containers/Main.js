@@ -31,7 +31,8 @@ const Main = (props) => {
 
                 <Route exact path='/users/:id/messages/new' component={withAuth(MessageForm)} />
 
-                <Route exact path='/users/:id/profile' render={(props) => <ProfilePage {...props} /> } />
+                {/* <Route exact path='/users/:id/profile' render={(props) => <ProfilePage {...props} /> } /> */}
+                <Route exact path='/users/:id/profile' component={withAuth(ProfilePage)} />
             </Switch>
         </div>
     )
