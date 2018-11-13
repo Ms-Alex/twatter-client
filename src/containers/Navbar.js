@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logout } from '../store/actions/auth';
 import Logo from '../images/twatter-logo.png'
@@ -8,6 +8,7 @@ class Navbar extends Component {
     logout = (e) => {
         e.preventDefault();
         this.props.logout();
+        this.props.history.push("/");
     }
     render() {
         return (
@@ -57,4 +58,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps, { logout })(Navbar);
+export default withRouter(connect(mapStateToProps, { logout })(Navbar));

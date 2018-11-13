@@ -1,7 +1,7 @@
 // landing page
 import React from 'react';
 import { Link } from 'react-router-dom';
-import MessageTimeline from './MessageTimeline';
+import MessageTimeline from '../containers/MessageTimeline';
 
 const Homepage = ({currentUser}) => {
 
@@ -21,7 +21,7 @@ const Homepage = ({currentUser}) => {
 
     return (
         <div>
-            <MessageTimeline profileImageUrl={currentUser.user.profileImageUrl} username={currentUser.user.username} />
+            <MessageTimeline />
         </div>
     )
     

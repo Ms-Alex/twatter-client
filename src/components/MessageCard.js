@@ -20,17 +20,6 @@ class MessageCard extends Component {
 
     }
 
-    // componentDidUpdate(){
-    //   window.$(".heartTooltip").tooltip();
-    // }
-    // componentDidMount(){
-    //   window.$('.heartTooltip').tooltip();
-    // }
-
-    // componentDidUpdate(){
-    //   window.$(".heartTooltip").tooltip();
-    // }
-
     renderButtons = () => {
       if(this.props.profileCard){
       return (

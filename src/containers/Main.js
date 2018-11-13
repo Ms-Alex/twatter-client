@@ -11,6 +11,7 @@ import withAuth from '../hocs/withAuth';
 import ProfilePage from './ProfilePage';
 
 const Main = (props) => {
+
     const { authUser, errors, removeError, currentUser } = props;
     return (
         <div className="container">
