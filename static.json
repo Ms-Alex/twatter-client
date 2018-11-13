@@ -5,7 +5,7 @@
     },
     "proxies": {
         "/api": {
-            "origin": "https://twatter-server-ah.herokuapp.com"
+            "origin": "https://twatter-server-ah.herokuapp.com/api"
         }
     }
 }
