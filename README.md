@@ -1,7 +1,7 @@
 # Twatter
 > A social application where you can add your status, throughout the day! As well as, checking out others' status' too!!
 
-Created with Node with Express backend, auth implementation using jasonWebToken, and a React with Redux frontend. Twatter allows you to post and delete any message you want to put out there. You can also view what others are saying, too.
+Created with Node with Express backend, auth implementation using jasonWebToken, and a React with Redux frontend. Twatter allows you to post, edit, and delete any message you want to put out there. Also, you can view what others' profile and like their status messages. Can't forget: edit your profile page, too!
 
 Deployed on Heroku: https://twatter-client-ah.herokuapp.com/
 
