@@ -26,7 +26,7 @@ front end:
 npm install
 ```
 
-** Must have node installed.
+** Must have node and mongo installed.
 
 ## Usage example
 
@@ -65,7 +65,11 @@ You can view someone's page, and edit your profile image:
 
 ## Development setup
 
-backend: 
+backend:
+
+On separate terminals run: `mongod` and `mongo`.
+
+Then, inside this repo (twatter-server/), run:
 ```sh
 npm start
 ```
